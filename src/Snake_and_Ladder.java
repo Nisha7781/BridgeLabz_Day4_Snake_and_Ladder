@@ -4,12 +4,13 @@ public class Snake_and_Ladder {
     {
         System.out.println("Welcome to Snake and ladder game with single player...");
         int PlayersPosition = 0;
+        int count1 = 0;
 
         while(PlayersPosition != 100)
         {
             int dice = (int) (Math.random()*6+1);
             System.out.println("Dice rolls by: "+ dice);
-
+            count1++;
             int currentOption = (int)(Math.random()*3+1);
             switch(currentOption)
             {
@@ -45,5 +46,8 @@ public class Snake_and_Ladder {
 
         }
         System.out.println("You Won the game....");
+
+        System.out.println("Dice is rolled "+ count1 +" times");
+
     }
 }

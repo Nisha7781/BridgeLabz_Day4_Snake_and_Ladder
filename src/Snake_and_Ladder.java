@@ -14,20 +14,20 @@ public class Snake_and_Ladder {
             switch(currentOption)
             {
                 case 1:
-                    System.out.println("NO PLAY");
+                    System.out.println("Option is No Play");
                     System.out.println("Player stays in the same position");
                     System.out.println("Position of player 1 is : "+ PlayersPosition);
                     break;
 
                 case 2:
-                    System.out.println("Ladder");
+                    System.out.println("Option got is Ladder");
                     System.out.println("Player moves forward by "+dice);
                     PlayersPosition = PlayersPosition + dice;
                     System.out.println("Position of player 1 is: "+ PlayersPosition);
                     break;
 
                 case 3:
-                    System.out.println("Snake");
+                    System.out.println("Option got is Snake");
                     System.out.println("Player moves backword by "+dice);
                     PlayersPosition = PlayersPosition - dice;
                     System.out.println("Position of player 1 is: "+ PlayersPosition);
@@ -38,7 +38,12 @@ public class Snake_and_Ladder {
             {
                 PlayersPosition = 0;
             }
+            if(PlayersPosition > 100)
+            {
+                PlayersPosition = PlayersPosition - dice;
+            }
 
         }
+        System.out.println("You Won the game....");
     }
 }
